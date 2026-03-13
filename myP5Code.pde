@@ -1,11 +1,14 @@
-var xPositions = [100];
-var yPositions = [200];
+var xPositions = [100, 200, 300];
+var yPositions = [200, 300, 400];
 
 setup = function() {
   size(400, 400); 
 };
-
 draw = function(){
+  if (mousePressed){
+    //xPositions[newInd]=mouseX;
+    xPositions.push(mouseX);
+  }
   background(0, 0, 0);
   drawStars();
 
